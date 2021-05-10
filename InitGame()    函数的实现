@@ -1,0 +1,17 @@
+
+void InitGame()
+{
+  //加载图片
+  loadimage(&img[0], L"images/land.jpg", 40, 40);    //空地
+  loadimage(&img[1], L"images/wall.jpg", 40, 40);    //墙
+  loadimage(&img[2], L"images/BoxYellow.jpg", 40, 40);  //箱子
+  loadimage(&img[3], L"images/ManDOWN1.jpg", 40, 40);  //人
+  loadimage(&img[4], L"images/aim.jpg", 40, 40);    //目标
+  loadimage(&img[5], L"images/BoxRed.jpg", 40, 40);  //箱子到达目的地
+  loadimage(&img[6], L"images/ManDOWN2.jpg", 40, 40);  //人
+  //播放音乐
+  mciSendString(L"open images/Music/back.mp3 alias back", nullptr, 0, nullptr);  //文件路径采用相对路径  alias 取别名
+  mciSendString(_T("play back repeat"), 0, 0, 0);    //repeat循环播放
+  //人物转态初始化
+  flag = 0;
+}
