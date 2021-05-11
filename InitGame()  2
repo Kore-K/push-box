@@ -1,0 +1,5 @@
+//播放音乐
+  mciSendString(L"open images/Music/back.mp3 alias back", nullptr, 0, nullptr);  //文件路径采用相对路径  alias 取别名
+  mciSendString(_T("play back repeat"), 0, 0, 0);    //repeat循环播放
+  //人物转态初始化
+  flag = 0;
