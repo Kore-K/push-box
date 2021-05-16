@@ -1,0 +1,33 @@
+
+void RenderGame()
+{
+  BeginBatchDraw();    //开始画图  防闪屏
+  //循环绘制地图
+  for (int y = 0; y < MAP_R; y++)    //循环每一行
+  {
+    for (int x = 0; x < MAP_C; x++)//循环每一列
+    {
+      switch (map[y][x])
+      {
+      case 0:putimage(x * 40, y * 40, &img[0]);  //空地
+        break;
+      case 1:putimage(x * 40, y * 40, &img[1]);  //墙
+        break;
+      case 2:putimage(x * 40, y * 40, &img[2]);  //箱子
+        break;
+      case 3:                    //玩家
+      case 7:                    //玩家站在目的地上
+        if(flag) //人物在两种转态之中转换，实现动态人物
+          putimage(x * 40, y * 40, &img[3]);  
+        else
+          putimage(x * 40, y * 40, &img[6]);  
+        break;
+      case 4:putimage(x * 40, y * 40, &img[4]);  //目的地
+        break;
+      case 6:putimage(x * 40, y * 40, &img[5]);  //箱子站在目的地上
+        break;
+      }
+    }
+  }
+  EndBatchDraw();      //结束绘图
+}
