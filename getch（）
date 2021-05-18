@@ -1,0 +1,22 @@
+
+if (kbhit())    //可以换成 _kbhit()  
+  {
+    dir = getch();  //可以换成 _getch()    
+    switch (dir)
+    {
+    case 'w':
+    case 72:
+      break;
+    case 's':
+    case 80:
+      break;
+    case 'a':
+    case 75:
+    case 'd':
+    case 77:
+      break;
+    }
+    PlaySound(L"../images/Music/Boxmove.WAV", nullptr, SND_FILENAME | SND_ASYNC);
+    RenderGame();    //绘制游戏
+    Sleep(100);      //创造更好d额游戏体验
+  }
