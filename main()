@@ -1,0 +1,32 @@
+int main()
+{
+  initgraph(40 * MAP_C, 40 * MAP_R);
+  InitGame();        //加载游戏
+  RenderGame();      //绘制游戏
+  T1 = GetTickCount();
+  while (1)
+  {
+    T2 = GetTickCount();
+    if (T2 - T1 >= 300)     //0.3s绘制一次游戏
+    {
+      T1 = T2;              //交换时间，进行下一次循环
+      flag = ++flag % 2;    //flag在0和1之间转换（这个操作很重要）
+      RenderGame();         //绘制游戏
+    }
+    UpdateGame();    //数据更新
+    //判断输赢d额函数
+    if (isWin())
+    {
+      MessageBox(GetHWnd(), L"恭喜你赢了", L"Vectory", MB_OK);
+      break;
+    }
+    if (isFail())
+    {
+      MessageBox(GetHWnd(), L"抱歉你输了", L"Defeated", MB_OK);
+      break;
+    }
+  }
+  
+  closegraph();
+  return 0;
+}
