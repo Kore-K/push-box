@@ -30,3 +30,5 @@ int main()
   closegraph();
   return 0;
 }
+
+//GetTickCount()函数的作用是返回程序运行的时间，通过T1和T2的赋值控制绘图的间隔时间。主框架还是游戏三部曲：初始化，绘图，数据更新。
