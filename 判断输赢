@@ -1,0 +1,40 @@
+
+bool isWin()
+{
+  for (int Row = 0; Row < MAP_R; Row++)
+  {
+    for (int Col = 0; Col < MAP_C; Col++)
+    {
+      //循环查找是否有 没在目的地的箱子
+      if (map[Row][Col] == 2)
+      {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+
+bool isFail()
+{
+  for (int Row = 0; Row < MAP_R; Row++)
+  {
+    for (int Col = 0; Col < MAP_C; Col++)
+    {
+      //寻找箱子
+      if (map[Row][Col] == 2)
+      {
+        //判断箱子两个相连方向是否有墙
+        if (map[Row - 1][Col] == 1 || map[Row + 1][Col] == 1)
+        {
+          if (map[Row][Col - 1] == 1 || map[Row][Col + 1] == 1)
+          {
+            return true;
+          }
+        }
+      }
+    }
+  }
+  return false;
+}
