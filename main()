@@ -1,6 +1,6 @@
 int main()
 {
-  initgraph(40 * MAP_C, 40 * MAP_R);
+  initgraph(40 * MAP_C, 40 * MAP_R);  //初始化图形系统  
   InitGame();        //加载游戏
   RenderGame();      //绘制游戏
   T1 = GetTickCount();
