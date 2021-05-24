@@ -1,0 +1,15 @@
+
+#include <windows.h>
+#pragma  comment (lib,"Winmm.lib") //使用音乐播放库
+
+C++播放音乐有两种方式，对应两种格式
+
+wav格式的音乐播放：
+        PlaySound()函数的功能及使用
+        wav格式播放音乐，当玩家按下键盘按键时背景音乐
+
+
+
+mp3格式的音乐播放：
+        mciSendString()函数的功能及使用
+        mp3格式播放音乐，在初始化里面循环播放背景音乐
