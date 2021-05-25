@@ -16,7 +16,7 @@ if (kbhit())
     case 77:
       break;
     }
-    PlaySound(L"../images/Music/Boxmove.WAV", nullptr, SND_FILENAME | SND_ASYNC);
+    PlaySound(L"..D:/Kore J/OneDrive/OneDrive - mails.ucas.edu.cn/桌面/pushbox/素材/images/Music/Boxmove.WAV", nullptr, SND_FILENAME | SND_ASYNC);
     RenderGame();    //绘制游戏
-    Sleep(100);      //创造更好d额游戏体验
+    Sleep(100);      //程序暂停100毫秒；创造更好的游戏体验；SLeep（）是#include<windows.h>里面的函数，作用是使系统睡眠
   }
