@@ -1,7 +1,7 @@
 
-if (kbhit())    //可以换成 _kbhit()  
+if (kbhit())    
   {
-    dir = getch();  //可以换成 _getch()    
+    dir = getch();  
     switch (dir)
     {
     case 'w':
