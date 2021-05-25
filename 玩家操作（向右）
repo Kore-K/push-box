@@ -18,3 +18,6 @@ if (map[index_Row][index_Col + 1] == 2 || map[index_Row][index_Col + 1] == 6)
     map[index_Row][index_Col + 2] = map[index_Row][index_Col + 2] + 2;
   }
 }
+
+上述代码是玩家按下右键后，及case 77:里面实现的操作
+其他三个方向类似
