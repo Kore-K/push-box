@@ -3,7 +3,7 @@ int main()
   initgraph(40 * MAP_C, 40 * MAP_R);  //初始化图形系统  
   InitGame();        //加载游戏
   RenderGame();      //绘制游戏
-  T1 = GetTickCount();
+  T1 = GetTickCount();   //GetTickCount()函数的作用是返回程序运行的时间，通过T1和T2的赋值控制绘图的间隔时间
   while (1)
   {
     T2 = GetTickCount();
@@ -13,7 +13,7 @@ int main()
       flag = ++flag % 2;    //flag在0和1之间转换（这个操作很重要）
       RenderGame();         //绘制游戏
     }
-    UpdateGame();    //数据更新
+    UpdateGame();    //数据的更新
     //判断输赢d额函数
     if (isWin())
     {
