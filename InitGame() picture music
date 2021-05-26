@@ -9,7 +9,7 @@ void InitGame()
     loadimage(&img[5], L"D:/Kore J/OneDrive/OneDrive - mails.ucas.edu.cn/桌面/推箱子/推箱子项目(拆分)及打包软件/程序/images/BoxRed.jpg", 40, 40);   
     loadimage(&img[6], L"D:/Kore J/OneDrive/OneDrive - mails.ucas.edu.cn/桌面/推箱子/推箱子项目(拆分)及打包软件/程序/images/ManDOWN2.jpg", 40, 40); 
 
-    mciSendString(L"open D:/Kore J/OneDrive/OneDrive - mails.ucas.edu.cn/桌面/推箱子/推箱子项目(拆分)及打包软件/程序/images/Music/back.mp3 alias back", nullptr, 0, nullptr);   
+    mciSendString(L"open ..//素材//images//back.mp3 alias back", nullptr, 0, nullptr);   
     mciSendString(_T("play back repeat"), 0, 0, 0);     
 
     flag = 0;
