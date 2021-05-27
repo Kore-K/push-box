@@ -1,5 +1,5 @@
 
-bool isWin()
+bool isWin()  //地图中没有黄色的箱子
 {
   for (int Row = 0; Row < MAP_R; Row++)
   {
@@ -16,7 +16,7 @@ bool isWin()
 }
 
 
-bool isFail()
+bool isFail()   //箱子相邻的两个或两个方向以上有障碍物（箱子或墙）
 {
   for (int Row = 0; Row < MAP_R; Row++)
   {
