@@ -1,1 +1,22 @@
 开始菜单界面，三大部分：开始游戏；游戏说明；关卡选择
+void startmenu()
+{
+  putimage(0,0,&img_bk);
+  setbkmode(TRANSPARENT);
+  settextcolor(BLACK);
+  settextstyle(50,0,_T("微软雅黑"));
+  outtextxy(Weidth*0.3,Height*0.3,“1.开始游戏”）;
+  outtextxy(Weidth*0.3,Height*0.4,“2.关卡选择”）;
+  outtextxy(Weidth*0.3,Height*0.5,“3.游戏说明”）;
+  FlushBatchDraw();
+  Sleep(2);
+  
+  char input;
+  if(_khbit())
+  {
+    input=getch();
+    if(input=='1')
+      gamestatus=1;
+    else if(input=='2')
+      gamestatus=2;
+    
