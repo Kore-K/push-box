@@ -2,7 +2,7 @@
 if (isWin())
 		{
 			part++;
-			if (part <= 2)
+			if (part <= 14)  // 根据关卡数设置判断
 			{
 				MessageBox(GetHWnd(), L"Congratulation! You Win!\nPlease press any keys to continue!", L"Vectory", MB_OK);
 				RenderGame();
