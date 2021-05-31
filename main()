@@ -3,7 +3,7 @@ int main()
   initgraph(40 * MAP_C, 40 * MAP_R);  //初始化图形系统  创建图形窗口
   InitGame();        //加载游戏
   RenderGame();      //绘制游戏
-  T1 = GetTickCount();   //GetTickCount()函数的作用是返回程序运行的时间，通过T1和T2的赋值控制绘图的间隔时间
+  T1 = GetTickCount();   // 函数原型是DWORD GetTickCount(void);GetTickCount()函数的作用是返回程序运行的时间，通过T1和T2的赋值控制绘图的间隔时间
   while (1)
   {
     T2 = GetTickCount();
