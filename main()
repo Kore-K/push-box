@@ -32,3 +32,31 @@ int main()
 }
 
 //GetTickCount()函数的作用是返回程序运行的时间，通过T1和T2的赋值控制绘图的间隔时间。主框架还是游戏三部曲：初始化，绘图，数据更新。
+
+void playgame()
+{
+	InitGame();				
+	image_initial();	
+	part = Select();
+	RenderGame();			
+	T1 = GetTickCount();		
+
+	while (1)
+	{
+		T2 = GetTickCount();
+		if (T2 - T1 >= 300)		
+		{
+			T1 = T2;			
+			flag = ++flag % 2;    
+			RenderGame();		
+		}
+		UpdateGame();		
+		if (isFail())
+		{
+			MessageBox(GetHWnd(), L"Sorry! Defeat! Please press any keys to break!", L"Defeated", MB_OK);
+
+			break;
+		}
+
+	}
+}
